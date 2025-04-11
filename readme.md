@@ -81,6 +81,10 @@ If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-
 python train_SaMam.py --content [train_content_dataset_folder] --style [train_style_dataset_folder]
 ```
 
+For instance, if you plan to train SaMam model on **2 GPUs**, a command sample is: 
+
+- *python train_SaMam.py --content ./Dataset/MS_COCO/ --style ./Dataset/wikiart/ --gpus 0 1*
+
 :worried:**Training on pure torch:**
 
 If you just use windows platform or the device can not be equipped with mamba_ssm, you can train our SaMam with only torch. However, the convergence speed is **very very very slow**! You should specify hyper-parameter **"mamba-from-trion" to 0**. Run:
@@ -108,7 +112,9 @@ If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-
 python test_image.py --content-dir [your_test_content_folder] --style-dir [your_test_style_folder] --model_ckpt [SaMam_ckpt_path]
 ```
 
-For instance, a command sample is "python test_image.py --content-dir ./test_images/content/ --style-dir ./test_images/style/ --model_ckpt ./checkpoint/iteration_200000.ckpt"
+For instance, a command sample is: 
+
+- *python test_image.py --content-dir ./test_images/content/ --style-dir ./test_images/style/ --model_ckpt ./checkpoint/iteration_200000.ckpt*
 
 :worried:**Test on pure torch:**
 

@@ -40,7 +40,6 @@ We use [wikiart](https://www.kaggle.com/competitions/painter-by-numbers/data) as
 ```
 Dataset
 ├── wikiart
-│   ├── lhq_1024_jpg
 │   ├── 0000001.jpg
 │   ├── 0000002.jpg
 │   ├── 0000003.jpg

@@ -39,9 +39,9 @@ def parse_args():
 
     # test dataset setting
     parser.add_argument('--content-dir', type=str, default='./test_images/content/',
-                        help='Directory with test content images (or path to single image). If not set, takes 5 random train_model content images.')
+                        help='Directory with test content images. If not set, takes 5 random train_model content images.')
     parser.add_argument('--style-dir', type=str, default='./test_images/style/',
-                        help='Directory with test style images (or path to single image). If not set, takes 5 random train_model style images.')
+                        help='Directory with test style images. If not set, takes 5 random train_model style images.')
     parser.add_argument('--output-dir', type=str, default='./test_images/output')
     parser.add_argument('--model_ckpt', type=str, default='/home/liuhd/SaMam_upload/checkpoint/iteration_200000.ckpt')
     parser.add_argument('--save-as', type=str, default='png')

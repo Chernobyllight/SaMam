@@ -65,35 +65,53 @@ Dataset
 
 ## Train
 
+Download [pretrained VGG](https://drive.google.com/file/d/13BzdootYTuwCiV4VW0sjSxjopWJiiRZg/view?usp=drive_link), and put the VGG checkpoint (.pth) into folder "./LOSS/vgg_ckp/". Then you can get into training folder "./TRAIN/":
+
+```
+cd ./TRAIN/
+```
+
+All the training settings are provided in function "parse_args()" of the file "train_SaMam.py". You can adapt them manually.
+
 :blush:**Training on mamba_ssm:** (default)
 
-If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can train our SaMam to strike a fast convergence.
+If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can train our SaMam to strike a fast convergence. With the default setting in "train_SaMam.py", you can train a SaMam model. Run:
 
-
+```
+python train_SaMam.py --content [train_content_dataset_folder] --style [train_style_dataset_folder]
+```
 
 :worried:**Training on pure torch:**
 
-If you just use windows platform or the device can not be equipped with mamba_ssm, you can train our SaMam with only torch. However, the convergence speed is **very very slow**!
+If you just use windows platform or the device can not be equipped with mamba_ssm, you can train our SaMam with only torch. However, the convergence speed is **very very very slow**! You should specify hyper-parameter **"mamba-from-trion" to 0**. Run:
 
-
+```
+python train_SaMam.py --content [train_content_dataset_folder] --style [train_style_dataset_folder] --mamba-from-trion 0
+```
 
 ## Test
+
+Please get into test folder "./TEST/". All the test settings are provided in function "parse_args()" of the file "test_image.py". You can adapt them manually.
 
 :blush:**Test on mamba_ssm:** (default)
 
 If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can test our SaMam with quick inference.
 
-
+```
+python test_image.py --content-dir [your_test_content_folder] --style-dir [your_test_style_folder] --model_ckpt [SaMam_ckpt_path]
+```
 
 :worried:**Test on pure torch:**
 
-If you are a windows platform player or don't install mamba_ssm, you can also generate stylized results by pure torch.
+If you are a windows platform player or don't install mamba_ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:
 
-
+```
+python test_image.py --content-dir [your_test_content_folder] --style-dir [your_test_style_folder] --mamba-from-trion 0 --model_ckpt [SaMam_ckpt_path]
+```
 
 ## Citation
 
-If you find our work useful in your research, please cite our [paper](https://arxiv.org/pdf/2503.15934)~
+If you find our work useful in your research, please cite our [paper](https://arxiv.org/pdf/2503.15934)~ Thank you!
 
 ```
 @article{liu2025samam,

@@ -43,7 +43,7 @@ def parse_args():
     parser.add_argument('--style-dir', type=str, default='./test_images/style/',
                         help='Directory with test style images (or path to single image). If not set, takes 5 random train_model style images.')
     parser.add_argument('--output-dir', type=str, default='./test_images/output')
-    parser.add_argument('--model_ckpt', type=str, default='/home/liuhd/SaMam_upload/checkpoint/test_zero.ckpt')
+    parser.add_argument('--model_ckpt', type=str, default='/home/liuhd/SaMam_upload/checkpoint/iteration_200000.ckpt')
     parser.add_argument('--save-as', type=str, default='png')
     parser.add_argument('--style-size', type=int, default=256,
                         help='Style images are resized such that the smaller edge has this size.')

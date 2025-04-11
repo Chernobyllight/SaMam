@@ -101,6 +101,8 @@ If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-
 python test_image.py --content-dir [your_test_content_folder] --style-dir [your_test_style_folder] --model_ckpt [SaMam_ckpt_path]
 ```
 
+For instance, a command sample is "python test_image.py --content-dir ./test_images/content/ --style-dir ./test_images/style/ --model_ckpt ./checkpoint/iteration_200000.ckpt"
+
 :worried:**Test on pure torch:**
 
 If you are a windows platform player or don't install mamba_ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:

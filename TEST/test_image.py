@@ -59,7 +59,7 @@ def parse_args():
     parser.add_argument('--expand', type=float, default=2.0)
     parser.add_argument('--compress-ratio', type=int, default=8)
     parser.add_argument('--squeeze-factor', type=int, default=8)
-    parser.add_argument('--mamba-from-trion', type=int, default=0)
+    parser.add_argument('--mamba-from-trion', type=int, default=1)
 
     parser.formatter_class = argparse.ArgumentDefaultsHelpFormatter
     return vars(parser.parse_args())

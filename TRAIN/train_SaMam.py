@@ -68,9 +68,9 @@ def parse_args():
                         help='Directory with style images.')
     # test data during training
     parser.add_argument('--test-content', type=str, default='./test_images/content',
-                        help='Directory with test content images (or path to single image). If not set, takes 5 random train_model content images.')
+                        help='Directory with test content images. If not set, takes 5 random train_model content images.')
     parser.add_argument('--test-style', type=str, default='./test_images/style',
-                        help='Directory with test style images (or path to single image). If not set, takes 5 random train_model style images.')
+                        help='Directory with test style images. If not set, takes 5 random train_model style images.')
     parser.add_argument('--batch-size', type=int, default=8,
                         help='Training batch size.')
 

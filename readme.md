@@ -90,7 +90,14 @@ python train_SaMam.py --content [train_content_dataset_folder] --style [train_st
 
 ## Test
 
-Please get into test folder "./TEST/". All the test settings are provided in function "parse_args()" of the file "test_image.py". You can adapt them manually.
+Please get into test folder "./TEST/".
+
+```
+cd ./TEST/
+```
+
+All the test settings are provided in function "parse_args()" of the file "test_image.py". You can adapt them manually.
+
 
 :blush:**Test on mamba_ssm:** (default)
 

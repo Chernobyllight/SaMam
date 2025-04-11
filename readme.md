@@ -110,4 +110,4 @@ This repository is heavily built upon the amazing works [AdaConv](https://github
 
 ## Contact
 
-[Hongda Liu](2946428816@qq.com)
+[Hongda Liu](mailto:2946428816@qq.com)

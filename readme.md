@@ -96,7 +96,7 @@ Please get into test folder "./TEST/".
 cd ./TEST/
 ```
 
-All the test settings are provided in function "parse_args()" of the file "test_image.py". You can adapt them manually.
+All the test settings are provided in function "parse_args()" of the file "test_image.py". You can adapt them manually when you use trained model with your own model setting.
 
 
 :blush:**Test on mamba_ssm:** (default)

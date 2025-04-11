@@ -25,6 +25,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 - python=3.10.4
 - torch=2.3.0
 - torchvision=0.18.1
+- tensorboardX=2.6.2.2
 - pytorch-lightning=2.3.0
 - trion=2.3.1
 - causal-conv1d=1.4.0

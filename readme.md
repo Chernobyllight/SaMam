@@ -12,7 +12,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 
 ![](Figs/Fig1.png)
 
-*(a) An overview of our SaMam framework; (B) An illustration of the selective scan methods in Vision mamba and VMamba.*
+*(a) An overview of our SaMam framework; (b) An illustration of the selective scan methods in Vision mamba and VMamba.*
 
 ![](Figs/Fig2.png)
 

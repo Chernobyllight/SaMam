@@ -32,7 +32,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 - $$\lhd$$ [mamba-ssm](https://github.com/state-spaces/mamba/releases)=2.2.2
 - cuda=12.6 (>=12.0)
 
-Note that, if you just want to test our model, the **unnecessary** package tools are marked with '' $\lhd$ '' above.
+Note that, if you just want to test our model, the **unnecessary** package tools are marked with "$\lhd$" above.
 
 
 ## :bank:Dataset Preparation

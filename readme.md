@@ -138,6 +138,7 @@ The 2 checkpoints trained on different hyper-parameters (e.g., ***patch-size***)
 The stylized results are listed in './TEST/test_images/output/'
 
 
+
 ### :worried:**Test on pure torch** <a id="test_with_puretorch"></a>
 
 If you are a windows platform player or don't install mamba-ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:

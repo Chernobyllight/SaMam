@@ -22,6 +22,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 
 ## :wrench:Dependencies
 
+- cuda=12.6 (>=12.0)
 - python=3.10.4
 - torch=2.3.0
 - torchvision=0.18.1
@@ -30,7 +31,6 @@ Global effective receptive field plays a crucial role for image style transfer (
 - trion=2.3.1
 - \($\lhd$\) [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases)=1.4.0
 - \($\lhd$\) [mamba-ssm](https://github.com/state-spaces/mamba/releases)=2.2.2
-- cuda=12.6 (>=12.0)
 
 Note that, if you just want to test our model, the **unnecessary** package tools are marked with "\($\lhd$\)" above.
 

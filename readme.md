@@ -32,7 +32,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 - \($\lhd$\) [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases)=1.4.0
 - \($\lhd$\) [mamba-ssm](https://github.com/state-spaces/mamba/releases)=2.2.2
 
-Note that, if you just want to **test** our model, the **unnecessary** package tools are marked with "\($\lhd$\)" above.
+Note that, if you just want to **test** our SaMam model with **pure torch**, the **unnecessary** package tools are marked with "\($\lhd$\)" above.
 
 
 ## :bank:Dataset Preparation

@@ -32,7 +32,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 - \($\lhd$\) [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases)=1.4.0
 - \($\lhd$\) [mamba-ssm](https://github.com/state-spaces/mamba/releases)=2.2.2
 
-Note that, if you just want to **test** our SaMam model with **pure torch**, the **unnecessary** package tools are marked with "\($\lhd$\)" above.
+Note that, if you just want to [**test** our SaMam model with **pure torch**](#test_with_puretorch), the **unnecessary** package tools are marked with "\($\lhd$\)" above.
 
 
 ## :bank:Dataset Preparation
@@ -137,6 +137,7 @@ The 2 checkpoints trained on different hyper-parameters (e.g., ***patch-size***)
 
 The stylized results are listed in './TEST/test_images/output/'
 
+<a id="test_with_puretorch"></a>
 ### :worried:**Test on pure torch**
 
 If you are a windows platform player or don't install mamba-ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:

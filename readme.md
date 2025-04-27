@@ -28,8 +28,8 @@ Global effective receptive field plays a crucial role for image style transfer (
 - tensorboardX=2.6.2.2
 - pytorch-lightning=2.3.0
 - trion=2.3.1
-- causal-conv1d=1.4.0
-- mamba-ssm=2.2.2
+- [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases)=1.4.0
+- [mamba-ssm](https://github.com/Dao-AILab/causal-conv1d/releases)=2.2.2
 - cuda=12.6 (>=12.0)
 
 
@@ -79,7 +79,7 @@ All the training settings are provided in function "parse_args()" of the file "t
 
 ### :blush:**Training on mamba_ssm** (default)
 
-If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can train our SaMam to strike a fast convergence. With the default setting in "train_SaMam.py", you can train a SaMam model. Run:
+If your device is equipped with [mamba-ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can train our SaMam to strike a fast convergence. With the default setting in "train_SaMam.py", you can train a SaMam model. Run:
 
 ```
 python train_SaMam.py --content [train_content_dataset_folder] --style [train_style_dataset_folder]
@@ -91,7 +91,7 @@ For instance, if you plan to train SaMam model on **2 GPUs**, and image patch si
 
 ### :worried:**Training on pure torch**
 
-If you just use windows platform or the device can not be equipped with mamba_ssm, you can train our SaMam with only torch. However, you should be patient when training because the convergence speed is **very very very slow**! You can specify hyper-parameter **"mamba-from-trion" to 0**. Run:
+If you just use windows platform or the device can not be equipped with mamba-ssm, you can train our SaMam with only torch. However, you should be patient when training because the convergence speed is **very very very slow**! You can specify hyper-parameter **"mamba-from-trion" to 0**. Run:
 
 ```
 python train_SaMam.py --content [train_content_dataset_folder] --style [train_style_dataset_folder] --mamba-from-trion 0
@@ -123,7 +123,7 @@ Please download them and put them in folder "./TEST/checkpoint/".
 
 ### :blush:**Test on mamba_ssm** (default)
 
-If your device is equipped with [mamba_ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can test our SaMam with quick inference speed. Run:
+If your device is equipped with [mamba-ssm](https://github.com/Dao-AILab/causal-conv1d/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can test our SaMam with quick inference speed. Run:
 
 ```
 python test_image.py --content-dir [your_test_content_folder] --style-dir [your_test_style_folder] --output-dir [output_folder] --model_ckpt [SaMam_ckpt_path]
@@ -138,7 +138,7 @@ The stylized results are listed in './TEST/test_images/output/'
 
 ### :worried:**Test on pure torch**
 
-If you are a windows platform player or don't install mamba_ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:
+If you are a windows platform player or don't install mamba-ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:
 
 ```
 python test_image.py --content-dir [your_test_content_folder] --style-dir [your_test_style_folder] --output-dir [output_folder] --model_ckpt [SaMam_ckpt_path] --mamba-from-trion 0

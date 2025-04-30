@@ -37,7 +37,7 @@ Note that, if you just plan to [***test** our SaMam model with **pure torch***](
 
 ## :bank:Dataset Preparation
 
-We use [wikiart](https://www.kaggle.com/competitions/painter-by-numbers/data) as our style dataset and [MS_COCO](https://cocodataset.org/#download) as our content dataset. Furthermore, the folder structure should be like:
+We use [wikiart](https://www.kaggle.com/competitions/painter-by-numbers/data) as our training style dataset and [MS_COCO](https://cocodataset.org/#download) as our training content dataset. Furthermore, the folder structure should be like:
 
 ```
 TRAIN
@@ -57,20 +57,30 @@ TEST
 ├── test_image.py
 ├── test_images
 │   ├── content
-│   │   ├── c1.jpg
-│   │   ├── c2.jpg
+│   │   ├── content_01.jpg
+│   │   ├── content_02.jpg
 │   │   ├── ...
 │   ├── style
-│   │   ├── s1.jpg
-│   │   ├── s2.jpg
+│   │   ├── style_01.jpg
+│   │   ├── style_02.jpg
 │   │   ├── ...
 ```
 
+## :lock:Pretrained-Model Preparation
 
+Download [pretrained VGG](https://drive.google.com/file/d/13BzdootYTuwCiV4VW0sjSxjopWJiiRZg/view?usp=drive_link), and put the VGG checkpoint (vgg_normalised.pth) into folder "./LOSS/vgg_ckp/", which is like:
 
-## :running:Train
+```
+LOSS
+├── vgg_ckpt
+│   ├── vgg_normalised.pth
+```
 
-Download [pretrained VGG](https://drive.google.com/file/d/13BzdootYTuwCiV4VW0sjSxjopWJiiRZg/view?usp=drive_link), and put the VGG checkpoint (vgg_normalised.pth) into folder "./LOSS/vgg_ckp/". Then you can get into training folder "./TRAIN/":
+## :bullettrain_front:Run
+
+### :running:Train
+
+Then you can get into training folder "./TRAIN/":
 
 ```
 cd ./TRAIN/
@@ -78,7 +88,7 @@ cd ./TRAIN/
 
 All the training settings are provided in function "parse_args()" of the file "train_SaMam.py". You can adapt them manually.
 
-### :blush:**Training on mamba_ssm** (default)
+#### :blush:**Training on mamba_ssm** (default)
 
 If your device is equipped with [mamba-ssm](https://github.com/state-spaces/mamba/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can train our SaMam to strike a fast convergence. With the default setting in "train_SaMam.py", you can train a SaMam model. Run:
 
@@ -90,7 +100,7 @@ For instance, if you plan to train SaMam model on **2 GPUs**, and image patch si
 
 - *python train_SaMam.py --content ./Dataset/MS_COCO/ --style ./Dataset/wikiart/ --gpus 0 1 --patch-size 8*
 
-### :worried:**Training on pure torch**
+#### :worried:**Training on pure torch**
 
 If you just use windows platform or the device can not be equipped with mamba-ssm, you can train our SaMam with only torch. However, you should be patient when training because the convergence speed is **very very very slow**! You can specify hyper-parameter **"mamba-from-trion" to 0**. Run:
 
@@ -102,7 +112,7 @@ For instance, if you plan to train SaMam model on **1 GPU** without mamba_ssm, a
 
 - *python train_SaMam.py --content ./Dataset/MS_COCO/ --style ./Dataset/wikiart/ --gpus 0 --patch-size 4 --mamba-from-trion 0*
 
-## :walking:Test
+### :walking:Test
 
 Please get into test folder "./TEST/".
 
@@ -112,7 +122,7 @@ cd ./TEST/
 
 All the test settings are provided in function "parse_args()" of the file "test_image.py". You can adapt them manually when you use your own trained model with your own architecture setting.
 
-### :white_check_mark: Checkpoint
+#### :white_check_mark: Checkpoint
 
 We provide 2 SaMam checkpoints trained on ***patch-size=8*** and ***patch-size=4*** for reference, respectively.
 
@@ -122,7 +132,7 @@ We provide 2 SaMam checkpoints trained on ***patch-size=8*** and ***patch-size=4
 
 Please download them and put them in folder "./TEST/checkpoint/".
 
-### :blush:**Test on mamba_ssm** (default)
+#### :blush:**Test on mamba_ssm** (default)
 
 If your device is equipped with [mamba-ssm](https://github.com/state-spaces/mamba/releases) and [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases), you can test our SaMam with quick inference speed. Run:
 
@@ -137,9 +147,7 @@ The 2 checkpoints trained on different hyper-parameters (e.g., ***patch-size***)
 
 The stylized results are listed in './TEST/test_images/output/'
 
-
-
-### :worried:**Test on pure torch** <a id="test_with_puretorch"></a>
+#### :worried:**Test on pure torch** <a id="test_with_puretorch"></a>
 
 If you are a windows platform player or don't install mamba-ssm, you can also generate stylized results by pure torch. You should also specify hyper-parameter **"mamba-from-trion" to 0**. Run:
 

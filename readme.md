@@ -64,7 +64,7 @@ TEST
 │   │   ├── ...
 ```
 
-## :lock: $\mathrm{IV}$ - Pretrained-Model Preparation
+## :lock: $\mathrm{IV}$ - Pretrained VGG Preparation
 
 Download [pretrained VGG](https://drive.google.com/file/d/13BzdootYTuwCiV4VW0sjSxjopWJiiRZg/view?usp=drive_link), and put the VGG checkpoint (vgg_normalised.pth) into folder "./LOSS/vgg_ckp/", which is like:
 

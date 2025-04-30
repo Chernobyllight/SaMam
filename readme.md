@@ -2,7 +2,7 @@
 
 Pytorch implementation of our CVPR 2025 highlight paper ***SaMam: Style-aware State Space Model for Arbitrary Image Style Transfer***.
 
-## :newspaper:Introduction
+## :newspaper: $\mathrm{I}$ - Introduction
 
 **TL;DR:** We introduce a novel Mamba backbone for arbitrary image style transfer, which strikes a balance between generation quality and efficiency.
 
@@ -18,9 +18,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 
 *The detailed architecture of Style-aware Vision State Space Module (SAVSSM).*
 
-
-
-## :wrench:Dependencies
+## :wrench: $\mathrm{II}$ - Dependencies
 
 - cuda=12.6 (>=12.0)
 - python=3.10.4
@@ -35,7 +33,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 Note that, if you just plan to [***test** our SaMam model with **pure torch***](#test_with_puretorch), the **un-necessary** package tools are marked with "\($\lhd$\)".
 
 
-## :bank:Dataset Preparation
+## :bank: $\mathrm{III}$ - Dataset Preparation
 
 We use [wikiart](https://www.kaggle.com/competitions/painter-by-numbers/data) as our training style dataset and [MS_COCO](https://cocodataset.org/#download) as our training content dataset. Furthermore, the folder structure should be like:
 
@@ -66,7 +64,7 @@ TEST
 │   │   ├── ...
 ```
 
-## :lock:Pretrained-Model Preparation
+## :lock: $\mathrm{IV}$ - Pretrained-Model Preparation
 
 Download [pretrained VGG](https://drive.google.com/file/d/13BzdootYTuwCiV4VW0sjSxjopWJiiRZg/view?usp=drive_link), and put the VGG checkpoint (vgg_normalised.pth) into folder "./LOSS/vgg_ckp/", which is like:
 
@@ -76,9 +74,9 @@ LOSS
 │   ├── vgg_normalised.pth
 ```
 
-## :bullettrain_front:Run
+## :bullettrain_front: $\mathrm{V}$ - Run
 
-### :running:Train
+### :running: $\mathrm{V}$.1 - Train
 
 Then you can get into training folder "./TRAIN/":
 
@@ -112,7 +110,7 @@ For instance, if you plan to train SaMam model on **1 GPU** without mamba_ssm, a
 
 - *python train_SaMam.py --content ./Dataset/MS_COCO/ --style ./Dataset/wikiart/ --gpus 0 --patch-size 4 --mamba-from-trion 0*
 
-### :walking:Test
+### :walking: $\mathrm{V}$.2 - Test
 
 Please get into test folder "./TEST/".
 
@@ -160,7 +158,7 @@ To use 2 checkpoints trained on different patch sizes, you should specify hyper-
 - *python test_image.py --content-dir ./test_images/content/ --style-dir ./test_images/style/ --output-dir ./test_images/output --model_ckpt ./checkpoint/SaMam_patchsize_x8.ckpt --patch-size 8 --mamba-from-trion 0*
 - *python test_image.py --content-dir ./test_images/content/ --style-dir ./test_images/style/ --output-dir ./test_images/output --model_ckpt ./checkpoint/SaMam_patchsize_x4.ckpt  --patch-size 4 --mamba-from-trion 0*
 
-## :star:Citation
+## :star: $\mathrm{VI}$ - Citation
 
 If you find our work useful in your research, please cite our [paper](https://arxiv.org/pdf/2503.15934)~ Thank you!
 
@@ -173,10 +171,10 @@ If you find our work useful in your research, please cite our [paper](https://ar
 }
 ```
 
-## :yum:Acknowledgement
+## :yum: $\mathrm{VII}$ - Acknowledgement
 
 This repository is heavily built upon the amazing works [AdaConv](https://github.com/RElbers/ada-conv-pytorch), [StyTR-2](https://github.com/diyiiyiii/StyTR-2) and [VMamba](https://github.com/MzeroMiko/VMamba). Thanks for their great effort to community.
 
-## :e-mail:Contact
+## :e-mail: $\mathrm{VIII}$ - Contact
 
 [Hongda Liu](mailto:2946428816@qq.com)

@@ -78,7 +78,7 @@ LOSS
 
 ### :running: $\mathrm{V}$.1 - Train
 
-Then you can get into training folder "./TRAIN/":
+Get into training folder "./TRAIN/":
 
 ```
 cd ./TRAIN/

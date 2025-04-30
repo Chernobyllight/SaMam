@@ -35,7 +35,7 @@ Note that, if you just plan to [***test** our SaMam model with **pure torch***](
 
 ## :bank: $\mathrm{III}$ - Dataset Preparation
 
-For training, we use [wikiart](https://www.kaggle.com/competitions/painter-by-numbers/data) as our style dataset and [MS_COCO](https://cocodataset.org/#download) as our content dataset. For testing, the content and style images are put in folders "./TEST/test_images/content" and "./TEST/test_images/style", respectively. Furthermore, the folder structure should be like:
+For training, we use [wikiart](https://www.kaggle.com/competitions/painter-by-numbers/data) as our style dataset and [MS_COCO](https://cocodataset.org/#download) as our content dataset. For testing, the content and style images are put in folders "./TEST/test_images/content/" and "./TEST/test_images/style/", respectively. Furthermore, the folder structure should be like:
 
 ```
 TRAIN

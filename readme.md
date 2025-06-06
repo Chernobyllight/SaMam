@@ -1,6 +1,6 @@
 # [CVPR 2025 Highlight] SaMam: Style-aware State Space Model for Arbitrary Image Style Transfer
 
-Pytorch implementation of our CVPR 2025 highlight paper ***SaMam: Style-aware State Space Model for Arbitrary Image Style Transfer***.
+Pytorch implementation of our CVPR 2025 highlight paper ***SaMam: Style-aware State Space Model for Arbitrary Image Style Transfer*** [[paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_SaMam_Style-aware_State_Space_Model_for_Arbitrary_Image_Style_Transfer_CVPR_2025_paper.pdf)][[supple](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Liu_SaMam_Style-aware_State_CVPR_2025_supplemental.pdf)].
 
 ## :newspaper: $\mathrm{I}$ - Introduction
 

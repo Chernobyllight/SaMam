@@ -26,7 +26,7 @@ Global effective receptive field plays a crucial role for image style transfer (
 - torchvision=0.18.1
 - tensorboardX=2.6.2.2
 - pytorch-lightning=2.3.0
-- trion=2.3.1
+- \($\lhd$\) triton=2.3.1
 - \($\lhd$\) [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases)=1.4.0
 - \($\lhd$\) [mamba-ssm](https://github.com/state-spaces/mamba/releases)=2.2.2
 

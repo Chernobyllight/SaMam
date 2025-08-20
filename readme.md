@@ -160,7 +160,7 @@ To use 2 checkpoints trained on different patch sizes, you should specify hyper-
 
 ## :star: $\mathrm{VI}$ - Citation
 
-If you find our work useful in your research, please cite our [paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_SaMam_Style-aware_State_Space_Model_for_Arbitrary_Image_Style_Transfer_CVPR_2025_paper.pdf)~ Thank you!
+If you find our work useful in your research, please cite our [paper](https://openaccess.thecvf.com/content/CVPR2025/html/Liu_SaMam_Style-aware_State_Space_Model_for_Arbitrary_Image_Style_Transfer_CVPR_2025_paper.html)~ Thank you!
 
 **[CVF](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_SaMam_Style-aware_State_Space_Model_for_Arbitrary_Image_Style_Transfer_CVPR_2025_paper.pdf)**
 ```
